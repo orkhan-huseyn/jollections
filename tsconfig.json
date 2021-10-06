@@ -7,8 +7,10 @@
     "lib": ["es2017"],
     "strict": true,
     "esModuleInterop": false,
-    "outDir": "out-tsc",
-    "rootDir": "./"
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "./"
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./dist"]
 }
