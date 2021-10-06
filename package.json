@@ -5,7 +5,8 @@
   "homepage": "https://github.com/orkhan-huseyn/stdjs#readme",
   "scripts": {
     "build": "rimraf dist && rollup -c",
-    "lint": "echo \"Yeah, lint!\""
+    "lint": "echo \"Yeah, lint!\"",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,5 @@
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^8.2.5"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
