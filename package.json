@@ -19,6 +19,9 @@
   "author": "Orkhan Huseynli <@orkhan-huseyn>",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "husky": "^7.0.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.58.0",
     "tslib": "^2.3.1",
@@ -26,5 +29,10 @@
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^8.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
