@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
+    "strictNullChecks": false,
     "noEmitOnError": true,
     "lib": ["es2017"],
     "strict": true,
