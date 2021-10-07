@@ -4,6 +4,7 @@
   "description": "The missing standard library for JavaScript",
   "homepage": "https://github.com/orkhan-huseyn/stdjs#readme",
   "scripts": {
+    "test": "jest",
     "build": "rimraf dist && rollup -c",
     "lint": "eslint 'src/**/*.{js,ts}'",
     "lint:fix": "eslint 'src/**/*.{js,ts}' --quiet --fix",
@@ -21,23 +22,27 @@
   "author": "Orkhan Huseynli <@orkhan-huseyn>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "babel-jest": "^27.2.4",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
+    "jest": "^27.2.4",
     "lint-staged": "^11.2.0",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.58.0",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
-  },
-  "dependencies": {
-    "@rollup/plugin-typescript": "^8.2.5"
   },
   "lint-staged": {
     "*.{js,ts}": [
