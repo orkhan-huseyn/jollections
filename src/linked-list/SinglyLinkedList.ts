@@ -42,7 +42,7 @@ export class SinglyLinkedList<T> {
       this.tail.setNext(newest);
     }
     this.tail = newest;
-    this.size++;
+    this.size--;
   }
 
   public removeFirst(): T {
