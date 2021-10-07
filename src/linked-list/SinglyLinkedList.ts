@@ -84,7 +84,7 @@ export class SinglyLinkedList<T> {
    * @returns {T} value of the last node
    */
   public removeLast(): T {
-    if (this.isEmpty) {
+    if (this.isEmpty()) {
       return null;
     }
     let penultimate = this.head;
