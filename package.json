@@ -1,6 +1,6 @@
 {
   "name": "jsstl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The missing standard template library for JavaScript",
   "homepage": "https://github.com/orkhan-huseyn/stdjs#readme",
   "main": "dist/bundle.cjs.js",
