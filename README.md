@@ -1,2 +1,3 @@
 # stdjs
-The missing standard library for JavaScript
+
+The missing Collections API and algorithms for JavaScript

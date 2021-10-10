@@ -1,8 +1,8 @@
 {
-  "name": "jsstl",
+  "name": "jollections",
   "version": "0.0.1",
-  "description": "The missing standard template library for JavaScript",
-  "homepage": "https://github.com/orkhan-huseyn/stdjs#readme",
+  "description": "The missing Collections API and algorithms for JavaScript",
+  "homepage": "https://github.com/orkhan-huseyn/jollections#readme",
   "main": "dist/bundle.cjs.js",
   "scripts": {
     "test": "jest",
@@ -13,12 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orkhan-huseyn/stdjs.git"
+    "url": "git+https://github.com/orkhan-huseyn/jollections.git"
   },
   "keywords": [
     "javascript",
-    "standard library",
-    "data structures"
+    "collections api",
+    "standard template library",
+    "data structures",
+    "algorithms"
   ],
   "author": "Orkhan Huseynli <@orkhan-huseyn>",
   "license": "MIT",
