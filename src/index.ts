@@ -1,4 +1,6 @@
 export {
   SinglyLinkedList,
   SinglyLinkedListNode,
-} from './linked-list/SinglyLinkedList';
+  DoublyLinkedList,
+  DoublyLinkedListNode,
+} from './linked-list';
