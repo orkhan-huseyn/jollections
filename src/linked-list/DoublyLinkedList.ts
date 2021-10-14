@@ -35,9 +35,15 @@ export class DoublyLinkedListNode<T> {
 }
 
 export class DoublyLinkedList<T> {
-  private header: DoublyLinkedListNode<T> = null;
-  private trailer: DoublyLinkedListNode<T> = null;
+  private header: DoublyLinkedListNode<T>;
+  private trailer: DoublyLinkedListNode<T>;
   private size = 0;
+
+  constructor() {
+    this.header = new DoublyLinkedListNode(null, null, null);
+    this.trailer = new DoublyLinkedListNode(null, this.header, null);
+    this.header.setNext(this.trailer);
+  }
 
   public addFirst(element: T): void {
     this.addBetween(element, this.header, this.header.getNext());
@@ -61,7 +67,7 @@ export class DoublyLinkedList<T> {
     return this.remove(this.trailer.getPrev());
   }
 
-  public addBetween(
+  private addBetween(
     element: T,
     predecessor: DoublyLinkedListNode<T>,
     successor: DoublyLinkedListNode<T>
@@ -72,7 +78,7 @@ export class DoublyLinkedList<T> {
     this.size++;
   }
 
-  public remove(node: DoublyLinkedListNode<T>): T {
+  private remove(node: DoublyLinkedListNode<T>): T {
     const predecessor = node.getPrev();
     const successor = node.getNext();
     predecessor.setNext(successor);
