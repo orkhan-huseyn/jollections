@@ -3,4 +3,5 @@ export {
   SinglyLinkedListNode,
   DoublyLinkedList,
   DoublyLinkedListNode,
+  CircularLinkedList,
 } from './linked-list';
