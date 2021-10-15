@@ -98,20 +98,6 @@ export class SinglyLinkedList<T> {
     return oldTail.getElement();
   }
   /**
-   * Returns size of the list
-   * @returns {number} size of the list
-   */
-  public getSize(): number {
-    return this.size;
-  }
-  /**
-   * Returns true if list size is zero, false otherwise
-   * @returns {boolean} true if list is empty
-   */
-  public isEmpty(): boolean {
-    return this.size === 0;
-  }
-  /**
    * Returns value of the first node
    * @returns {T} value of the first node
    */
@@ -130,5 +116,19 @@ export class SinglyLinkedList<T> {
       return null;
     }
     return this.tail.getElement();
+  }
+  /**
+   * Returns size of the list
+   * @returns {number} size of the list
+   */
+  public getSize(): number {
+    return this.size;
+  }
+  /**
+   * Returns true if list size is zero, false otherwise
+   * @returns {boolean} true if list is empty
+   */
+  public isEmpty(): boolean {
+    return this.size === 0;
   }
 }

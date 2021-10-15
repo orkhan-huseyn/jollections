@@ -130,20 +130,6 @@ export class DoublyLinkedList<T> {
     return node.getElement();
   }
   /**
-   * Returns size of the list
-   * @returns {number} size of list
-   */
-  public getSize(): number {
-    return this.size;
-  }
-  /**
-   * Returns true if the list is empty, fasle otherwise
-   * @returns {boolean} true if the list is empty
-   */
-  public isEmpty(): boolean {
-    return this.size === 0;
-  }
-  /**
    * Returns value of the head
    * @returns {T} value of first node
    */
@@ -162,5 +148,19 @@ export class DoublyLinkedList<T> {
       return null;
     }
     return this.trailer.getPrev().getElement();
+  }
+  /**
+   * Returns size of the list
+   * @returns {number} size of list
+   */
+  public getSize(): number {
+    return this.size;
+  }
+  /**
+   * Returns true if the list is empty, fasle otherwise
+   * @returns {boolean} true if the list is empty
+   */
+  public isEmpty(): boolean {
+    return this.size === 0;
   }
 }
