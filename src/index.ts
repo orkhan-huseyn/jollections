@@ -5,3 +5,4 @@ export {
   DoublyLinkedListNode,
   CircularLinkedList,
 } from './linked-list';
+export { Stack } from './stack';
