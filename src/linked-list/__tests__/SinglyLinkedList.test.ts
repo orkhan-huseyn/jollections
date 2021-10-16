@@ -4,7 +4,7 @@ describe('SinglyLinkedList', () => {
   let linkedList: SinglyLinkedList<number>;
 
   beforeEach(() => {
-    linkedList = new SinglyLinkedList();
+    linkedList = new SinglyLinkedList<number>();
   });
 
   it('creates linked list with empty head and tail', () => {

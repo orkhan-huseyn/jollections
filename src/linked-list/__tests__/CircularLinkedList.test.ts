@@ -4,7 +4,7 @@ describe('CircularLinkedList', () => {
   let linkedList: CircularLinkedList<number>;
 
   beforeEach(() => {
-    linkedList = new CircularLinkedList();
+    linkedList = new CircularLinkedList<number>();
   });
 
   it('creates linked list with empty head and tail', () => {

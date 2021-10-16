@@ -4,7 +4,7 @@ describe('DoublyLinkedList', () => {
   let linkedList: DoublyLinkedList<number>;
 
   beforeEach(() => {
-    linkedList = new DoublyLinkedList();
+    linkedList = new DoublyLinkedList<number>();
   });
 
   it('creates linked list with empty header and trailer', () => {

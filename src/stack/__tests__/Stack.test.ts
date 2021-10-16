@@ -4,7 +4,7 @@ describe('Stack', () => {
   let stack: Stack<number>;
 
   beforeEach(() => {
-    stack = new Stack();
+    stack = new Stack<number>();
   });
 
   it('creates an empty stack with size of zero', () => {
