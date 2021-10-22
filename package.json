@@ -5,7 +5,7 @@
   "homepage": "https://github.com/orkhan-huseyn/jollections#readme",
   "main": "dist/bundle.cjs.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "build": "rimraf dist && rollup -c",
     "lint": "eslint 'src/**/*.{js,ts}'",
     "lint:fix": "eslint 'src/**/*.{js,ts}' --quiet --fix",

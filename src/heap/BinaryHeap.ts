@@ -12,6 +12,7 @@ export class BinaryHeap<T> {
       throw new TypeError('Comparator function is not defined');
     }
     this.compare = comparator;
+    this.heap = [];
   }
   /**
    * Returns index of parent node
@@ -117,10 +118,10 @@ export class BinaryHeap<T> {
     return this.size() === 0;
   }
   /**
-   * Returns minimum element from the heap
+   * Returns top element from the heap
    * @returns {T} the minimum element
    */
-  public min(): T {
+  protected top(): T {
     if (this.isEmpty()) {
       return null;
     }
@@ -137,10 +138,10 @@ export class BinaryHeap<T> {
     return element;
   }
   /**
-   * Removes minimum element from top of heap and returns it
+   * Removes top element from top of heap and returns it
    * @returns {T} minimum element from the heap
    */
-  public removeMin(): T {
+  protected removeTop(): T {
     if (this.isEmpty()) {
       return null;
     }
