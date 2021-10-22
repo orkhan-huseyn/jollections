@@ -119,7 +119,7 @@ export class BinaryHeap<T> {
   }
   /**
    * Returns top element from the heap
-   * @returns {T} the minimum element
+   * @returns {T} the top element
    */
   protected top(): T {
     if (this.isEmpty()) {
@@ -139,7 +139,7 @@ export class BinaryHeap<T> {
   }
   /**
    * Removes top element from top of heap and returns it
-   * @returns {T} minimum element from the heap
+   * @returns {T} top element from the heap
    */
   protected removeTop(): T {
     if (this.isEmpty()) {
