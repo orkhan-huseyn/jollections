@@ -12,7 +12,7 @@ export default {
       format: 'esm',
     },
     {
-      name: 'StdJs',
+      name: 'Jollections',
       file: 'dist/bundle.umd.js',
       format: 'umd',
     },
