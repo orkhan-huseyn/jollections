@@ -7,3 +7,4 @@ export {
 } from './linked-list';
 export { Stack } from './stack';
 export { Queue, Deque } from './queue';
+export { MinHeap, MaxHeap } from './heap';
