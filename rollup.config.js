@@ -1,4 +1,5 @@
 import typescript from '@rollup/plugin-typescript';
+import { uglify } from 'rollup-plugin-uglify';
 
 export default {
   input: 'src/index.ts',
@@ -17,5 +18,5 @@ export default {
       format: 'umd',
     },
   ],
-  plugins: [typescript({ tsconfig: './tsconfig.json' })],
+  plugins: [typescript({ tsconfig: './tsconfig.json' }), uglify()],
 };
