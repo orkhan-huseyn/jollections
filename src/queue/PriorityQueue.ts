@@ -1,8 +1,4 @@
-export type ComparableObject = {
-  compareTo: (to: ComparableObject) => number;
-};
-export type Comparable = number | string | Date | ComparableObject;
-export type ComparatorFn = (a: Comparable, b: Comparable) => number;
+export type ComparatorFn = (a: any, b: any) => number;
 
 export class PriorityQueue<T extends Comparable> {
   private heap: Array<T>;
