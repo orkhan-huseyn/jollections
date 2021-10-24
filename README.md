@@ -23,3 +23,16 @@ list.addLast(2);
 ## Documentation
 
 Soon...
+
+## Contribution
+
+If you want to contribute, fork the repo, create your own branch (name does not matter as long as it makes sense) and start working.
+If Husky files are not executable by default make sure you make give them execute permission. It can be done by using following commands on Linux or Linux like environments:
+
+```sh
+chmod ug+x .husky/*
+chmod ug+x .git/hooks/*
+```
+
+It will make sure that our Git hooks work properly. Hooks will check your commit messages and will run linter on each commit.
+Make sure your commits match [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) or your changes will not be accepted.
