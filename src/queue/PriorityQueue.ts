@@ -4,7 +4,7 @@ export type ComparableObject = {
 export type Comparable = number | string | Date | ComparableObject;
 export type ComparatorFn = (a: Comparable, b: Comparable) => number;
 
-export class PriorityQueue<T> {
+export class PriorityQueue<T extends Comparable> {
   private heap: Array<T>;
   private compare: ComparatorFn;
   /**
@@ -136,7 +136,7 @@ export class PriorityQueue<T> {
    * @param {T} element value to insert
    * @returns {T} newly inserted value
    */
-  public insert(element: T): T {
+  public add(element: T): T {
     this.heap.push(element);
     this.upheap(this.size() - 1);
     return element;
