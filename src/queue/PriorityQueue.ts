@@ -1,6 +1,6 @@
 export type ComparatorFn = (a: any, b: any) => number;
 
-export class PriorityQueue<T extends Comparable> {
+export class PriorityQueue<T> {
   private heap: Array<T>;
   private compare: ComparatorFn;
   /**
