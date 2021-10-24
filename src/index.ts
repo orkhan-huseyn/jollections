@@ -7,3 +7,4 @@ export {
 } from './linked-list';
 export { Stack } from './stack';
 export { Queue, Deque, PriorityQueue } from './queue';
+export { Trie } from './trie';
