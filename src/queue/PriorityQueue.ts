@@ -1,11 +1,15 @@
-export type ComparatorFn = (a: any, b: any) => number;
+export type ComparableObject = {
+  compareTo: (to: ComparableObject) => number;
+};
+export type Comparable = number | string | Date | ComparableObject;
+export type ComparatorFn = (a: Comparable, b: Comparable) => number;
 
-export class BinaryHeap<T> {
+export class PriorityQueue<T> {
   private heap: Array<T>;
   private compare: ComparatorFn;
   /**
-   * Initializes a heap class with given comparator function
-   * @param {ComparatorFn} comparator comparator function to compare heap entries
+   * Initializes a PriorityQueue class with given comparator function
+   * @param {Function} comparator comparator function to compare heap entries
    */
   constructor(comparator?: ComparatorFn) {
     if (!comparator) {
@@ -19,7 +23,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {number} index of parent node
    */
-  protected parent(index: number): number {
+  private parent(index: number): number {
     return Math.floor((index - 1) / 2);
   }
   /**
@@ -27,7 +31,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {number} index of left child
    */
-  protected left(index: number): number {
+  private left(index: number): number {
     return 2 * index + 1;
   }
   /**
@@ -35,7 +39,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {number} index of right child
    */
-  protected right(index: number): number {
+  private right(index: number): number {
     return 2 * index + 2;
   }
   /**
@@ -43,7 +47,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {boolean} whether node has left child
    */
-  protected hasLeft(index: number): boolean {
+  private hasLeft(index: number): boolean {
     return this.left(index) < this.size();
   }
   /**
@@ -51,7 +55,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {boolean} whether node has right child
    */
-  protected hasRight(index: number): boolean {
+  private hasRight(index: number): boolean {
     return this.right(index) < this.size();
   }
   /**
@@ -60,7 +64,7 @@ export class BinaryHeap<T> {
    * @param {number} j second index
    * @returns {void}
    */
-  protected swap(i: number, j: number): void {
+  private swap(i: number, j: number): void {
     const temp = this.heap[i];
     this.heap[i] = this.heap[j];
     this.heap[j] = temp;
@@ -71,7 +75,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {void}
    */
-  protected upheap(index: number): void {
+  private upheap(index: number): void {
     while (index > 0) {
       const parent = this.parent(index);
       if (this.compare(this.heap[index], this.heap[parent]) >= 0) {
@@ -86,7 +90,7 @@ export class BinaryHeap<T> {
    * @param {number} index arbitrary index
    * @returns {void}
    */
-  protected downheap(index: number): void {
+  private downheap(index: number): void {
     while (this.hasLeft(index)) {
       const leftIndex = this.left(index);
       let smallChildIndex = leftIndex;
@@ -121,7 +125,7 @@ export class BinaryHeap<T> {
    * Returns top element from the heap
    * @returns {T} the top element
    */
-  protected top(): T {
+  public peek(): T {
     if (this.isEmpty()) {
       return null;
     }
@@ -141,7 +145,7 @@ export class BinaryHeap<T> {
    * Removes top element from top of heap and returns it
    * @returns {T} top element from the heap
    */
-  protected removeTop(): T {
+  public poll(): T {
     if (this.isEmpty()) {
       return null;
     }
