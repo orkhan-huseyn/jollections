@@ -9,7 +9,7 @@ export class QuickFind {
     for (let i = 0; i < size; i++) {
       this.roots[i] = i;
     }
-    this.count = 0;
+    this.count = size;
   }
   /**
    * Returns root of given node
@@ -34,8 +34,17 @@ export class QuickFind {
           this.roots[i] = rootX;
         }
       }
-      this.count++;
+      this.count--;
     }
+  }
+  /**
+   * Returns true if given nodes are connected
+   * @param {number} x node x
+   * @param {number} y node y
+   * @returns {boolean} whether the given nodes are connected
+   */
+  isConnected(x: number, y: number): boolean {
+    return this.find(x) === this.find(y);
   }
   /**
    * Returns number of connected components
