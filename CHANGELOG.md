@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/orkhan-huseyn/jollections/compare/v0.0.6...v0.0.7) (2021-10-26)
+
+
+### Bug Fixes
+
+* add .test extension to union by rank test file ([eb373bb](https://github.com/orkhan-huseyn/jollections/commit/eb373bb9a82faad573b4013c2e2a87543f62764c))
+
 ### [0.0.6](https://github.com/orkhan-huseyn/jollections/compare/v0.0.5...v0.0.6) (2021-10-26)
 
 
