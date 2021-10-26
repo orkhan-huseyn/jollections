@@ -2,7 +2,7 @@ export abstract class UnionFind {
   protected roots: number[];
   protected count: number;
   /**
-   * Creates QuickFind class with given size
+   * Creates UnionFind class with given size
    * @param {number} size size of the set, default size is 16
    */
   constructor(size = 16) {
