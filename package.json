@@ -1,6 +1,6 @@
 {
   "name": "jollections",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "The missing Collections API and algorithms for JavaScript",
   "homepage": "https://github.com/orkhan-huseyn/jollections#readme",
   "main": "dist/bundle.cjs.js",
