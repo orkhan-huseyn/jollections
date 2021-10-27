@@ -8,4 +8,4 @@ export {
 export { Stack } from './stack';
 export { Queue, Deque, PriorityQueue } from './queue';
 export { Trie } from './trie';
-export { QuickFind } from './union-find';
+export { QuickFind, QuickUnion, UnionByRank } from './union-find';
