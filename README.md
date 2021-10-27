@@ -29,12 +29,12 @@ const { PriorityQueue } = require('jollections');
 
 const queue = new PriorityQueue((a, b) => a.weight - b.weight);
 
-queue.add({ vertex: 'A', weight: 2 });
-queue.add({ vertex: 'B', weight: 6 });
-queue.add({ vertex: 'C', weight: 1 });
-queue.add({ vertex: 'D', weight: 3 });
+queue.enqueue({ vertex: 'A', weight: 2 });
+queue.enqueue({ vertex: 'B', weight: 6 });
+queue.enqueue({ vertex: 'C', weight: 1 });
+queue.enqueue({ vertex: 'D', weight: 3 });
 
-const nearestNeighbor = queue.poll();
+const nearestNeighbor = queue.dequeue();
 console.log(nearestNeighbor); // { vertex: 'C', weight: 1 }
 ```
 

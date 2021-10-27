@@ -132,7 +132,7 @@ export class PriorityQueue<T> {
    * @param {T} element value to insert
    * @returns {T} newly inserted value
    */
-  public add(element: T): T {
+  public enqueue(element: T): T {
     this.heap.push(element);
     this.upheap(this.size() - 1);
     return element;
@@ -141,7 +141,7 @@ export class PriorityQueue<T> {
    * Removes top element from top of heap and returns it
    * @returns {T} top element from the heap
    */
-  public poll(): T {
+  public dequeue(): T {
     if (this.isEmpty()) {
       return null;
     }
